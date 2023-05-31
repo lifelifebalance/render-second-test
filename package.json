@@ -8,13 +8,16 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf build && cd ../part2/notes && npm run build && cp -r build ../../part3",
-    "deploy:full":"npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
+  "proxy": "http//localhost:3001",
   "author": "Simon Hoffmann",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "dotenv": "^16.1.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
